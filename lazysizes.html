@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lazysizes</title>
+
+  <script>
+    document.createElement( "picture" );
+  </script>
+
+  <script src="picturefill.js" async></script>
+  <script src="lazysizes.js" async></script>
+
+  <script>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+  </script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #eee;
+      margin: 0;
+      padding: 6em 0 0;
+    }
+    header {
+      background-color: #eee;
+      border-bottom: 1px solid #ccc;
+      padding: 2em 0;
+      position: fixed;
+      top: 0; 
+      text-align: center;
+      width: 100%;
+    }
+    h1 {
+      font: normal bold normal 2em/1em Helvetica, Arial;
+      margin: 0;
+    }
+
+    .wrapper {
+      background-color: #ddd;
+      margin: 2em auto 0 auto;
+      max-width: 664px;
+      padding: 2em;
+    }
+
+    aside {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 1em;
+    }
+
+    picture {
+      display: block;
+      height: auto;
+      margin: 2em auto 0 auto;
+      max-width: 100%;
+    }
+    img {
+      vertical-align: middle;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <h1><em>lazysizes.js</em> + <em>picturefill.js</em></h1>
+  </header>
+
+  <div class="wrapper">
+
+    <aside>
+      <ol>
+        <li>Watch the DOM as you scroll the page</li>
+        <li>View the markup to see code</li>
+        <li><code>lazysizes.js</code>: <a href="https://github.com/aFarkas/lazysizes">https://github.com/aFarkas/lazysizes</a> </li>
+        <li><code>picturefill.js</code>: <a href="https://scottjehl.github.io/picturefill">https://scottjehl.github.io/picturefill</a></li>
+      </ol>
+    </aside>
+
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=001" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=001" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=001" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=001" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=002" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=002" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=002" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=002" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=003" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=003" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=003" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=003" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=004" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=004" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=004" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=004" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=005" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=005" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=005" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=005" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=006" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=006" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=006" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=006" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=007" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=007" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=007" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=007" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=008" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=008" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=008" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=008" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=009" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=009" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=009" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=009" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=010" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=010" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=010" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=010" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=011" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=011" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=011" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=011" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=012" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=012" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=012" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=012" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=013" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=013" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=013" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=013" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=014" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=014" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=014" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=014" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=015" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=015" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=015" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=015" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=016" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=016" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=016" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=016" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=017" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=017" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=017" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=017" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=018" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=018" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=018" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=018" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=019" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=019" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=019" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=019" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=020" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=020" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=020" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=020" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=021" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=021" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=021" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=021" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=022" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=022" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=022" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=022" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=023" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=023" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=023" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=023" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=024" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=024" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=024" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=024" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=025" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=025" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=025" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=025" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=026" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=026" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=026" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=026" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=027" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=027" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=027" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=027" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=028" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=028" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=028" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=028" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=029" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=029" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=029" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=029" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=030" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=030" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=030" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=030" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=031" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=031" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=031" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=031" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=032" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=032" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=032" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=032" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=033" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=033" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=033" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=033" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=034" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=034" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=034" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=034" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=035" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=035" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=035" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=035" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=036" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=036" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=036" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=036" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=037" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=037" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=037" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=037" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=038" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=038" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=038" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=038" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=039" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=039" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=039" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=039" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+    <picture class="lazyload">
+      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <source data-srcset="https://placehold.it/600x300&amp;text=040" media="(min-width: 600px)">
+      <source data-srcset="https://placehold.it/400x200&amp;text=040" media="(min-width: 400px)">
+      <source data-srcset="https://placehold.it/200x100&amp;text=040" media="(min-width: 200px)">
+      <!--[if IE 9]></video><![endif]-->
+  
+      <img src="https://placehold.it/2x1&amp;text=040" class="lazyload" alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+    </picture>
+
+  </div>
+
+</body>
+</html>
