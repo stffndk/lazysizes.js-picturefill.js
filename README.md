@@ -1,2 +1,2 @@
 # lazysizes.js-picturefill.js
-Lazyload of Rexponsive images with `picturefill.js` and `lazysizes.js`
+Lazyload of Responsive images with `picturefill.js` and `lazysizes.js`
